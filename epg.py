@@ -76,7 +76,7 @@ def get_working_proxy():
         }
         try:
             test_url = f"{API}/v3.0/getMobileChannelList/get/?langId=6&os=android&devicetype=phone&usertype=tvYR7NSNn7rymo3F&version=285"
-            response = requests.get(test_url, proxies=tproxies, timeout=5)
+            response = requests.get(test_url, proxies=tproxies, timeout=30)
 
             if response.status_code == 200:
                 working_proxy = prx
