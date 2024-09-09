@@ -37,3 +37,12 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Automated EPG
+
+      - name: Check Latest Commit
+        run: git log -1
+
+      - name: Verify File Changes
+        run: |
+          ls -l epg.xml.gz
+          git status
+
